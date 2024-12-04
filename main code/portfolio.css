@@ -1,0 +1,239 @@
+body{
+    background-color: #EDD4BF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+html {
+    font-family: Josefin Slab, sans-serif;
+    color: #27160E;
+}
+a{
+    text-decoration: none;
+    color: #27160E;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 300;
+}
+h2{
+    font-size: 2.7rem;
+    font-weight: 300;
+}
+h3{
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+h4{
+    font-size: 2.1rem;
+    font-weight: 300;
+}
+h5{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+h6{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.bp{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.p{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.sp{
+    font-size: 1rem;
+    font-weight: 300;
+}
+#navBar{
+    background-color: #A07353;
+    position: fixed;
+    z-index: 100;
+    width: 99vw;
+    height: fit-content;
+    padding: 0;
+    align-items: center;
+}
+#navBar ul{
+    transform: translate(0,-0.5rem);
+}
+#navBar li{
+    padding: 1.9% 2%;
+    display: inline;
+}
+#navBar a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#navBar li:hover{
+    background-color: #754930;
+}
+#navBar .selected{
+    background-color: #754930;
+}
+#profile{
+    display: inline;
+    text-align: left;
+    margin-right: 30%;
+}
+#profile img{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10%;
+}
+#volume{
+    width: 3rem;
+    filter: brightness(0) saturate(100%) invert(6%) sepia(12%) saturate(3973%) hue-rotate(341deg) brightness(97%) contrast(92%);
+    margin: 5rem 0 0 auto;
+    z-index: -1;
+}
+#sections{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+}
+#sections div{
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 45%;
+    margin: 1rem;
+}
+#sections div:last-child{
+    width: 100%;
+}
+#sections:hover div{
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+#sections div:hover{
+    background-color: #F2E5D5;
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
+    animation-name: hover;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes hover{
+    0% {background-color: #ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+    50% {background-color: #F2E5D5;box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 24px 80px 0 rgba(0, 0, 0, 0.19);}
+    100% {background-color: #ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+}
+#projects{
+    align-items: center;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#projects .project{
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    margin: 1rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#projects:hover .project{
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+#projects .project:hover{
+    background-color: #F2E5D5;
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
+    animation-name: hover;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.project img{
+    width: 100%;
+    border-radius: 1rem;
+}
+.project .img{
+    width: 30%;
+    padding: 0;
+    margin: auto 0;
+}
+.project .text{
+    width: 30%;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+.project .text h5{
+    margin: 2%;
+}
+.thought{
+    display:none;
+    background-color:#fff;
+    padding:20px;
+    border-radius:30px;
+    min-width:40px;
+    max-width:220px;
+    min-height:40px;
+    margin:20px;
+    position:relative;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+.thought:first-child{
+    display: flex;
+}
+.thought:before,
+.thought:after {
+    content:"";
+    background-color:#fff;
+    border-radius:50%;
+    display:block;
+    position:absolute;
+    z-index:-1;
+}
+.thought:before {
+    width:44px;
+    height:44px;
+    top:-12px;
+    left:28px;
+    box-shadow:-50px 30px 0 -12px #fff;
+}
+.thought:after {
+    bottom:-10px;
+    right:26px;
+    width:30px;
+    height:30px;
+    box-shadow:40px -34px 0 0 #fff,
+               -28px -6px 0 -2px #fff,
+               -24px 17px 0 -6px #fff,
+               -5px 25px 0 -10px #fff;
+}
+#thoughts img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+}
