@@ -1,0 +1,53 @@
+#projects{
+    align-items: center;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#projects .project{
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    margin: 1rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#projects:hover .project{
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+#projects .project:hover{
+    background-color: #F2E5D5;
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
+    animation-name: hover;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.project img{
+    width: 100%;
+    border-radius: 1rem;
+}
+.project .img{
+    width: 30%;
+    padding: 0;
+    margin: auto 0;
+}
+.project .text{
+    width: 30%;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+.project .text h5{
+    margin: 2%;
+}
