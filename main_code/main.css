@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     background-color: #EDD4BF;
     display: flex;
@@ -85,6 +88,9 @@ h6{
     width: 2rem;
     height: 2rem;
 }
+#navBar i{
+    display: none;
+}
 #intro{
     display: flex;
     flex-direction: column;
@@ -95,7 +101,7 @@ h6{
 #volume{
     width: 3rem;
     filter: brightness(0) saturate(100%) invert(6%) sepia(12%) saturate(3973%) hue-rotate(341deg) brightness(97%) contrast(92%);
-    margin: 5rem 0 0 auto;
+    margin: 6rem 0 0 auto;
     z-index: -1;
 }
 #sections{
@@ -115,24 +121,96 @@ h6{
 #sections div:last-child{
     width: 100%;
 }
-#sections:hover div{
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+/*phones*/
+@media only screen and (max-width: 620px) {
+    #navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 110%;
+        height: 100%;
+        text-align: center;
+        z-index: 1;
+        margin-left:-10%;
+        display: none;
+        align-items: center;
+    }
+    #navBar ul{
+        transform: translate(0,0);
+    }
+    #navBar li{
+        padding: 5% 0;
+        display: block;
+        width: 100%;
+    }
+    #navBar li:first-child{
+        margin-top: 15%;
+    }
+    #profile{
+        display: inline;
+        margin: auto;
+    }
+    #profile img{
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+    }
+    #navBtn{
+        display: block;
+        align-items: center;
+        z-index: 2;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        width: 5rem;
+        height: 5rem;
+        padding: 0;
+        border: none;
+        background-color: #EDD4BF;
+    }
+    i{
+        color: #000000;
+        height: 5%;
+    }
+    #navBtn:hover{
+        background-color: #754930;
+    }
+    #sections div{
+        width: 100%;
+        opacity: 1;
+        animation: showDivs 1s;
+    }
+    @keyframes showDivs {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
 }
-#sections div:hover{
-    background-color: #F2E5D5;
-    -moz-filter: blur(0);
-    -o-filter: blur(0);
-    -ms-filter: blur(0);
-    filter: blur(0);
-    animation-name: hover;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-@keyframes hover{
-    0% {background-color: #ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-    50% {background-color: #F2E5D5;box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 24px 80px 0 rgba(0, 0, 0, 0.19);}
-    100% {background-color: #ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+/*tablets*/
+/*@media only screen and (min-width: 620px) {...}*/
+/*desktop*/
+@media only screen and (min-width: 1024px) {
+    #navBtn{
+        display: none;
+    }
+    #sections:hover div{
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+    }
+    #sections div:hover{
+        background-color: #F2E5D5;
+        -moz-filter: blur(0);
+        -o-filter: blur(0);
+        -ms-filter: blur(0);
+        filter: blur(0);
+        animation-name: hover;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes hover{
+        0% {background-color: #ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+        50% {background-color: #F2E5D5;box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 24px 80px 0 rgba(0, 0, 0, 0.19);}
+        100% {background-color: #ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+    }
 }
